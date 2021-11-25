@@ -1,0 +1,4 @@
+/.idea
+/frame-extractor/.idea
+/frame-extractor/target
+/frame-extractor/target/classes/com/felipeflohr/frameextractor

@@ -11,7 +11,7 @@
         <dependency>
             <groupId>org.boofcv</groupId>
             <artifactId>boofcv-ffmpeg</artifactId>
-            <version>0.38</version>
+            <version>0.39.1</version>
         </dependency>
     </dependencies>
 

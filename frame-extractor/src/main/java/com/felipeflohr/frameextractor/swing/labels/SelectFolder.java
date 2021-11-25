@@ -11,7 +11,7 @@ import java.io.File;
 
 public class SelectFolder extends JLabel implements ActionListener {
 
-    private JTextField FOLDER_PATH_TXT_FIELD;
+    private final JTextField FOLDER_PATH_TXT_FIELD;
     private File folder;
 
     public SelectFolder() {

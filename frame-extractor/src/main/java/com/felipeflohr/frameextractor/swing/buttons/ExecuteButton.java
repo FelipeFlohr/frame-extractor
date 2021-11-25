@@ -14,13 +14,13 @@ import java.io.File;
 
 public class ExecuteButton extends JButton implements ActionListener {
 
-    SelectVideo video;
-    SelectFolder folder;
+    final SelectVideo VIDEO;
+    final SelectFolder FOLDER;
     final ProgressBar PROGRESS_BAR;
 
     public ExecuteButton(SelectVideo video, SelectFolder folder, ProgressBar progressBar) {
-        this.video = video;
-        this.folder = folder;
+        this.VIDEO = video;
+        this.FOLDER = folder;
         PROGRESS_BAR = progressBar;
 
         setText("Extract frames");
@@ -30,10 +30,10 @@ public class ExecuteButton extends JButton implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        File videoFile = video.getVideoFile();
-        File folderFile = folder.getFolderFile();
+        File videoFile = VIDEO.getVideoFile();
+        File folderFile = FOLDER.getFolderFile();
 
-        if (videoFile == null || folder == null) {
+        if (videoFile == null) {
             JOptionPane.showMessageDialog(null, "You need to select both video and folder to save", "Error", JOptionPane.ERROR_MESSAGE);
         }
         else if (videoFile.getAbsolutePath().isEmpty() || folderFile.getAbsolutePath().isEmpty()) {

@@ -11,7 +11,6 @@ import javax.swing.SwingUtilities;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 
 public class Extractor implements Runnable {
 
@@ -35,7 +34,7 @@ public class Extractor implements Runnable {
         return frameGrabber.getLengthInFrames();
     }
 
-    private void extractFrames() throws FrameGrabber.Exception, InterruptedException, InvocationTargetException {
+    private void extractFrames() throws FrameGrabber.Exception {
         FFmpegFrameGrabber frameGrabber = new FFmpegFrameGrabber(VIDEO.getAbsolutePath());
         frameGrabber.start();
         int frames = getAmountOfFrames();
@@ -71,7 +70,7 @@ public class Extractor implements Runnable {
     public void run() {
         try {
             extractFrames();
-        } catch (FrameGrabber.Exception | InterruptedException | InvocationTargetException e) {
+        } catch (FrameGrabber.Exception e) {
             e.printStackTrace();
         }
     }

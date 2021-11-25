@@ -9,4 +9,4 @@ A simple GUI frame extractor made in Java using Swing.
 
 ## How to use it
 
-Just open it, select the video you want to extract the frames, then select the folder you want to save the frames. If the program looks frozen, don't worry, it is doing it's job in the background. In the future I pretend to solve this by using multithreads.
+Just open it, select the video you want to extract the frames, then select the folder you want to save the frames.
